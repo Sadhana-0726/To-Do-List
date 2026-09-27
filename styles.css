@@ -1,0 +1,217 @@
+/* --- PEACEFUL & CHEERFUL THEME --- */
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; 
+}
+
+body { 
+  /* Soothing, cheerful pastel gradient background */
+  background: linear-gradient(135deg, #fff3e0 0%, #e8f5e9 50%, #e0f2fe 100%);
+  min-height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start;
+  padding-top: 60px; 
+}
+
+.todo-app { 
+  background: rgba(255, 255, 255, 0.92); 
+  backdrop-filter: blur(10px);
+  width: 90%; 
+  max-width: 480px; 
+  padding: 32px 28px; 
+  border-radius: 20px; 
+  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.15); 
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+h1 { 
+  margin-bottom: 24px; 
+  color: #2d3748; 
+  font-size: 1.75rem; 
+  font-weight: 700;
+  text-align: center; 
+  letter-spacing: -0.5px;
+}
+
+form { 
+  display: flex; 
+  gap: 10px; 
+  margin-bottom: 22px; 
+}
+
+input[type="text"] { 
+  flex: 1; 
+  padding: 12px 18px; 
+  border: 2px solid #e2e8f0; 
+  border-radius: 12px; 
+  outline: none; 
+  font-size: 0.95rem;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus { 
+  border-color: #6ee7b7; 
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.25);
+}
+
+form button { 
+  padding: 12px 20px; 
+  background: #10b981; 
+  color: white; 
+  font-weight: 600;
+  border: none; 
+  border-radius: 12px; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+form button:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.filter-group { 
+  display: flex; 
+  gap: 8px; 
+  margin-bottom: 20px; 
+  justify-content: center; 
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.filter-btn { 
+  flex: 1;
+  padding: 8px 14px; 
+  border: none; 
+  background: transparent; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active { 
+  background: #ffffff; 
+  color: #059669; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.todo-list { 
+  list-style: none; 
+  margin-bottom: 20px; 
+  max-height: 320px; 
+  overflow-y: auto; 
+}
+
+.todo-item { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 12px 14px; 
+  margin-bottom: 8px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  gap: 12px; 
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-color: #cbd5e1;
+}
+
+.todo-item.completed {
+  background: #f1f5f9;
+  opacity: 0.75;
+}
+
+.todo-item.completed .todo-text { 
+  text-decoration: line-through; 
+  color: #94a3b8; 
+}
+
+.todo-content { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  flex: 1; 
+}
+
+/* Custom styled checkbox */
+.toggle-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.todo-text { 
+  flex: 1; 
+  cursor: pointer; 
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.edit-input { 
+  flex: 1; 
+  padding: 6px 10px; 
+  border: 2px solid #10b981; 
+  border-radius: 8px; 
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.delete-btn { 
+  background: none; 
+  border: none; 
+  color: #cbd5e1; 
+  cursor: pointer; 
+  font-size: 1.1rem;
+  font-weight: bold; 
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+.footer { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  color: #64748b; 
+  font-size: 0.85rem; 
+  font-weight: 500;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+#clear-completed { 
+  background: none; 
+  border: none; 
+  color: #f59e0b; 
+  cursor: pointer; 
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+#clear-completed:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
